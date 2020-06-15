@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+            [
+                "II",
+                "IS",
+                " S"
+            ],
+    "key": 
+            {
+                "I": {
+                    "item": "minecraft:bone"
+                },
+                "S": {
+                    "item": "minecraft:stick"
+                }
+            },
+    "result": {
+        "item": "ourcraft-armory:bone_axe"
+    }
+}
+

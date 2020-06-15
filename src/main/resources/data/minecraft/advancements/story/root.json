@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:grass_block"
+    },
+    "title": {
+      "translate": "advancements.story.root.title"
+    },
+    "description": {
+      "translate": "advancements.story.root.description"
+    }
+  },
+  "criteria": {
+    "vanilla_override": {
+      "trigger": "minecraft:imposible"
+    }
+  }
+}

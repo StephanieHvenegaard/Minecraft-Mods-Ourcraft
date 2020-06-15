@@ -1,0 +1,35 @@
+{
+  "parent": "ourcraft:ourcraft-story/root",
+  "display": {
+    "icon": {
+      "item": "item.ourcraft-core.obsidian_ingot"
+    },
+    "title": {
+      "translate": "advancements.story.this-should-not-work.title"
+    },
+    "description": {
+      "translate": "advancements.story.this-should-not-work.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "item.ourcraft-core.obsidian_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obsidian_ingot"
+    ]
+  ]
+}

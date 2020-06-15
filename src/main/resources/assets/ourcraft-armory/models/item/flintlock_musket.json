@@ -1,0 +1,21 @@
+{
+    "parent": "ourcraft-armory:item/basefirearm",
+    "textures": {
+        "layer0": "ourcraft-armory:item/flintlock_musket"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "pulling": 1,
+                "pull": 1.0
+            },
+            "model": "ourcraft-armory:item/flintlock_musket_loaded"
+        },
+        {
+            "predicate": {
+                "charged": 1
+            },
+            "model": "ourcraft-armory:item/flintlock_musket_loaded"
+        }
+    ]
+}

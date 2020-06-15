@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+            [
+                "I",
+                "S",
+                "S"
+            ],
+    "key": 
+            {
+                "I": {
+                    "item": "minecraft:bamboo"
+                },
+                "S": {
+                    "item": "minecraft:stick"
+                }
+            },
+    "result": {
+        "item": "ourcraft-armory:bamboo_spade"
+    }
+}
+

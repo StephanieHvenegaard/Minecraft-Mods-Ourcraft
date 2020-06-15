@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+            [
+                "X X",
+                "XXX",
+                "XXX"
+            ],
+    "key": 
+            {
+                "X": {
+                  "item": "minecraft:bone"
+                }
+            },
+    "result": {
+        "item": "ourcraft-armory:bone_chest"
+    }
+}

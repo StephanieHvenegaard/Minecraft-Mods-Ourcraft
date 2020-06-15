@@ -1,0 +1,41 @@
+{
+    "parent": "minecraft:adventure/throw_trident",
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Toasted Marshmallow"
+        },
+        "description": {
+            "text": "Kill a Ghast with a Trident!"
+        },
+        "icon": {
+            "item": "minecraft:snow_block"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "Ghast Killed": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:ghast"
+                },
+                "killing_blow": {
+                    "is_projectile": true,
+                    "direct_entity": {
+                        "type": "minecraft:trident"
+                    },
+                    "source_entity": {
+                        "type": "minecraft:player"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "experience": 20
+    }
+}
