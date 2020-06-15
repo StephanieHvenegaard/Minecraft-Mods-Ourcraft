@@ -1,4 +1,4 @@
-/* 
+/*
 
 MIT License
 
@@ -52,12 +52,12 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(OurcraftCore.MODID)
-public class OurcraftCore {
 
-    public static OurcraftCore INSTANCE;                                                // public instance of the main mod class
-    public static final String MODID = "ourcraft-core";                                 // Mod id 
-    public static final ItemGroup OURCRAFT_GROUP = new OurcraftCoreTap();               // creative tap  
+@Mod(modid = Referance.MODID, name = Referance.NAME, version = Referance.VERSION)
+public class Ourcraft {
+
+    public static Ourcraft INSTANCE;                                                // public instance of the main mod class
+    public static final ItemGroup OURCRAFT_GROUP = new OurcraftCoreTap();               // creative tap
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger(MODID);                    // Logger
 
@@ -76,7 +76,7 @@ public class OurcraftCore {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    // Setup of the mod. 
+    // Setup of the mod.
     private void setup(final FMLCommonSetupEvent event) {
         // some preinit code
 
@@ -96,7 +96,7 @@ public class OurcraftCore {
     public static class RegistryEvents {
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event) {
-            // register a new item here           
+            // register a new item here
             event.getRegistry().registerAll(
                     // ------------------------------------------------------------------------------
                     // OurcraftBlocks
@@ -131,7 +131,7 @@ public class OurcraftCore {
             LOGGER.info("All Blocks Registered.");
         }
 
-//        @SubscribeEvent
+        //        @SubscribeEvent
 //        public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
 //            // register a new block here
 //            LOGGER.info("HELLO from Register Block");
