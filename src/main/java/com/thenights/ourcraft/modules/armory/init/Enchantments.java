@@ -1,4 +1,4 @@
-package com.thenights.ourcraft.armory.init;
-
-public class Enchantments {
-}
+//package com.thenights.ourcraft.armory.init;
+//
+//public class Enchantments {
+//}
