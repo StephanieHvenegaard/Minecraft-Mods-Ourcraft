@@ -19,6 +19,7 @@ public class ModItems {
     public static ArrayList<Item> ITEMS = new ArrayList<>();
 
     public static void PreInit() {
+        
         OBSIDIAN_INGOT_ITEM =  new BaseItem("ingot_obsidian");
 
         ITEMS.add(OBSIDIAN_INGOT_ITEM);
