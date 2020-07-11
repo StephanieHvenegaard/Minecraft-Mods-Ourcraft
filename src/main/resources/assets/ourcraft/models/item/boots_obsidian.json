@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ourcraft:items/chestplate_obsidian"
+    "layer0": "ourcraft:items/boots_obsidian"
   }
 }
 
