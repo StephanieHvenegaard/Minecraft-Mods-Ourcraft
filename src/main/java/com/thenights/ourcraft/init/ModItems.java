@@ -19,10 +19,8 @@ public class ModItems {
     public static ArrayList<Item> ITEMS = new ArrayList<>();
 
     public static void PreInit() {
-        OBSIDIAN_INGOT_ITEM =  new Item();
-        OBSIDIAN_INGOT_ITEM.setCreativeTab(Ourcraft.CORE_TAB);
-        OBSIDIAN_INGOT_ITEM.setRegistryName(Ourcraft.RESOURCE_PREFIX + "ingot_obsidian");
-        OBSIDIAN_INGOT_ITEM.setUnlocalizedName(OBSIDIAN_INGOT_ITEM.getRegistryName().toString());
+        OBSIDIAN_INGOT_ITEM =  new BaseItem("ingot_obsidian");
+
         ITEMS.add(OBSIDIAN_INGOT_ITEM);
     }
 
@@ -30,6 +28,6 @@ public class ModItems {
         GameRegistry.addSmelting(Blocks.OBSIDIAN, new ItemStack(OBSIDIAN_INGOT_ITEM), 3.0F);
         //GameRegistry.addSmelting((Block)ModBlocks.vulcaniteOre, new ItemStack(vulcaniteNuggetItem), 1.0F);
 
-        OreDictionary.registerOre("ingotVulcanite", OBSIDIAN_INGOT_ITEM);
+        OreDictionary.registerOre("ingotObsidian", OBSIDIAN_INGOT_ITEM);
     }
 }
