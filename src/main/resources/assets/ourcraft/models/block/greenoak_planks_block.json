@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "ourcraft-core:block/greenoak_planks_block"
-    }
-}
