@@ -39,10 +39,10 @@ public class ModItems {
         OBSIDIAN_HOE_ITEM = new BaseHoeItem("hoe_obsidian",ModMaterials.OBSIDIAN);
         OBSIDIAN_SWORD_ITEM = new BaseSwordItem("sword_obsidian",ModMaterials.OBSIDIAN);
 
-        OBSIDIAN_HELMET_ITEM = new BaseArmor("helmet", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.HEAD);
-        OBSIDIAN_CHESTPLATE_ITEM = new BaseArmor("chestplate", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.CHEST);
-        OBSIDIAN_LEGGINGS_ITEM = new BaseArmor("leggings", ModMaterials.OBSIDIAN_ARMOR, 1, EntityEquipmentSlot.LEGS);
-        OBSIDIAN_BOOTS_ITEM = new BaseArmor("boots", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.FEET);
+        OBSIDIAN_HELMET_ITEM = new BaseArmor("helmet_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.HEAD);
+        OBSIDIAN_CHESTPLATE_ITEM = new BaseArmor("chestplate_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.CHEST);
+        OBSIDIAN_LEGGINGS_ITEM = new BaseArmor("leggings_obsidian", ModMaterials.OBSIDIAN_ARMOR, 1, EntityEquipmentSlot.LEGS);
+        OBSIDIAN_BOOTS_ITEM = new BaseArmor("boots_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.FEET);
     }
 
     public static void Init() {
