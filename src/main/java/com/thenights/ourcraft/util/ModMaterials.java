@@ -47,6 +47,6 @@ public class ModMaterials {
     // kelp("kelp", 1, 25,1, 1, 1, 1, 0.0f, Items.DRIED_KELP);
 
 
-    public static final ItemArmor.ArmorMaterial OBSIDIAN_ARMOR = EnumHelper.addArmorMaterial( "obsidian", Ourcraft.RESOURCE_PREFIX+"obsidian", 330, new int[] { 8,10,12,7}, 3, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F).setRepairItem(new ItemStack(ModItems.OBSIDIAN_INGOT_ITEM));
+    public static final ItemArmor.ArmorMaterial OBSIDIAN_ARMOR = EnumHelper.addArmorMaterial( "obsidian", Ourcraft.RESOURCE_PREFIX+"obsidian", 330, new int[] { 8,10,12,7}, 3, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.0F).setRepairItem(new ItemStack(ModItems.OBSIDIAN_INGOT_ITEM));
     public static final Item.ToolMaterial OBSIDIAN = EnumHelper.addToolMaterial("obsidian", 3, (int)(1562*3.5), 18.0F, 21.0F, 3).setRepairItem(new ItemStack(ModItems.OBSIDIAN_INGOT_ITEM));
 }
