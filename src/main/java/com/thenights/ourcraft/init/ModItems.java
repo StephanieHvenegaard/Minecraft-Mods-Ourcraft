@@ -29,6 +29,16 @@ public class ModItems {
     public static Item OBSIDIAN_LEGGINGS_ITEM;
     public static Item OBSIDIAN_BOOTS_ITEM;
 
+    public static Item COPPER_HELMET_ITEM;
+    public static Item COPPER_CHESTPLATE_ITEM;
+    public static Item COPPER_LEGGINGS_ITEM;
+    public static Item COPPER_BOOTS_ITEM;
+
+    public static Item TEMPERED_COPPER_HELMET_ITEM;
+    public static Item TEMPERED_COPPER_CHESTPLATE_ITEM;
+    public static Item TEMPERED_COPPER_LEGGINGS_ITEM;
+    public static Item TEMPERED_COPPER_BOOTS_ITEM;
+
     public static ArrayList<Item> ITEMS = new ArrayList<>();
 
     public static void PreInit() {
@@ -43,6 +53,16 @@ public class ModItems {
         OBSIDIAN_CHESTPLATE_ITEM = new BaseArmor("chestplate_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.CHEST);
         OBSIDIAN_LEGGINGS_ITEM = new BaseArmor("leggings_obsidian", ModMaterials.OBSIDIAN_ARMOR, 1, EntityEquipmentSlot.LEGS);
         OBSIDIAN_BOOTS_ITEM = new BaseArmor("boots_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.FEET);
+
+        OBSIDIAN_HELMET_ITEM = new BaseArmor("helmet_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.HEAD);
+        OBSIDIAN_CHESTPLATE_ITEM = new BaseArmor("chestplate_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.CHEST);
+        OBSIDIAN_LEGGINGS_ITEM = new BaseArmor("leggings_obsidian", ModMaterials.OBSIDIAN_ARMOR, 1, EntityEquipmentSlot.LEGS);
+        OBSIDIAN_BOOTS_ITEM = new BaseArmor("boots_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.FEET);
+
+        TEMPERED_COPPER_HELMET_ITEM = new BaseArmor("helmet_tempered_copper", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.HEAD);
+        TEMPERED_COPPER_CHESTPLATE_ITEM = new BaseArmor("chestplate_tempered_copper", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.CHEST);
+        TEMPERED_COPPER_LEGGINGS_ITEM = new BaseArmor("leggings_tempered_copper", ModMaterials.OBSIDIAN_ARMOR, 1, EntityEquipmentSlot.LEGS);
+        TEMPERED_COPPER_BOOTS_ITEM = new BaseArmor("boots_tempered_copper", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.FEET);
     }
 
     public static void Init() {
