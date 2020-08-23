@@ -1,6 +1,5 @@
 package com.thenights.ourcraft;
 
-import com.thenights.ourcraft.proxy.ClientProxy;
 import com.thenights.ourcraft.proxy.CommonProxy;
 import com.thenights.ourcraft.tab.CoreTab;
 import net.minecraft.creativetab.CreativeTabs;
