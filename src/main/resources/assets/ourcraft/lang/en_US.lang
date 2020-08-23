@@ -1,6 +1,7 @@
 itemGroup.ourcraft_coretab=Ourcraft Core
 
 item.ourcraft:ingot_obsidian.name=Obsidian Ingot
+item.ourcraft:dust_obsidian.name=Dense Obsidian Dust
 
 item.ourcraft:pickaxe_obsidian.name=Obsidian Pickaxe
 item.ourcraft:shovel_obsidian.name=Obsidian Shovel
