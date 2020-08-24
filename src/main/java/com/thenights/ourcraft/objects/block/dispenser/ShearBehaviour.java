@@ -51,7 +51,6 @@ public class ShearBehaviour implements IBehaviorDispenseItem
                         ent.motionX += ((rand.nextFloat() - rand.nextFloat()) * 0.1F);
                         ent.motionZ += ((rand.nextFloat() - rand.nextFloat()) * 0.1F);
                     }
-
                     stack.damageItem(1, (EntityLivingBase)shearable);
                 }
             }
