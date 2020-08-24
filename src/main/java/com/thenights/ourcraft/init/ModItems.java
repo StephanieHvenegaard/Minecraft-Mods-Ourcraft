@@ -56,25 +56,35 @@ public class ModItems {
     public static ArrayList<Item> ITEMS = new ArrayList<>();
 
     public static void PreInit() {
+<<<<<<< HEAD
         OBSIDIAN_DUST_ITEM =  new BaseItem("dust_obsidian");
+=======
+
+>>>>>>> armor-names
         BONE_PICKAXE_ITEM = new BasePickaxeItem("pickaxe_bone", ModMaterials.BONE);
         BONE_SHOVEL_ITEM = new BaseShovelItem("shovel_bone",ModMaterials.BONE);
         BONE_AXE_ITEM = new BaseAxeItem("axe_bone", ModMaterials.BONE);
         BONE_HOE_ITEM = new BaseHoeItem("hoe_bone",ModMaterials.BONE);
         BONE_SWORD_ITEM = new BaseSwordItem("sword_bone",ModMaterials.BONE);
+<<<<<<< HEAD
 
+=======
+>>>>>>> armor-names
         BONE_HELMET_ITEM = new BaseArmor("helmet_bone", ModMaterials.BONE_ARMOR, 0, EntityEquipmentSlot.HEAD);
         BONE_CHESTPLATE_ITEM = new BaseArmor("chestplate_bone", ModMaterials.BONE_ARMOR, 0, EntityEquipmentSlot.CHEST);
         BONE_LEGGINGS_ITEM = new BaseArmor("leggings_bone", ModMaterials.BONE_ARMOR, 1, EntityEquipmentSlot.LEGS);
         BONE_BOOTS_ITEM = new BaseArmor("boots_bone", ModMaterials.BONE_ARMOR, 0, EntityEquipmentSlot.FEET);
 
+<<<<<<< HEAD
+=======
+        OBSIDIAN_DUST_ITEM =  new BaseItem("dust_obsidian");
+>>>>>>> armor-names
         OBSIDIAN_INGOT_ITEM =  new BaseItem("ingot_obsidian");
         OBSIDIAN_PICKAXE_ITEM = new BasePickaxeItem("pickaxe_obsidian", ModMaterials.OBSIDIAN);
         OBSIDIAN_SHOVEL_ITEM = new BaseShovelItem("shovel_obsidian",ModMaterials.OBSIDIAN);
         OBSIDIAN_AXE_ITEM = new BaseAxeItem("axe_obsidian", ModMaterials.OBSIDIAN);
         OBSIDIAN_HOE_ITEM = new BaseHoeItem("hoe_obsidian",ModMaterials.OBSIDIAN);
         OBSIDIAN_SWORD_ITEM = new BaseSwordItem("sword_obsidian",ModMaterials.OBSIDIAN);
-
         OBSIDIAN_HELMET_ITEM = new BaseArmor("helmet_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.HEAD);
         OBSIDIAN_CHESTPLATE_ITEM = new BaseArmor("chestplate_obsidian", ModMaterials.OBSIDIAN_ARMOR, 0, EntityEquipmentSlot.CHEST);
         OBSIDIAN_LEGGINGS_ITEM = new BaseArmor("leggings_obsidian", ModMaterials.OBSIDIAN_ARMOR, 1, EntityEquipmentSlot.LEGS);
