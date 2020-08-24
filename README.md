@@ -11,3 +11,4 @@ they where abselutly invaluable for learning how to mod for minecraft.
 ### 1.12.2
 - Vulcanite [Curse Forge](https://www.curseforge.com/minecraft/mc-mods/vulcanite)
 - Forbidden and Arcanus [Curse Forge](https://www.curseforge.com/minecraft/mc-mods/forbidden-arcanus/screenshots)
+- VanillaAutomation [Curse Forge](https://www.curseforge.com/minecraft/mc-mods/vanillaautomation)
