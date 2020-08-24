@@ -8,7 +8,10 @@ item.ourcraft:shovel_obsidian.name=Obsidian Shovel
 item.ourcraft:axe_obsidian.name=Obsidian Axe
 item.ourcraft:hoe_obsidian.name=Obsidian Hoe
 item.ourcraft:sword_obsidian.name=Obsidian Sword
-<<<<<<< HEAD
+item.ourcraft:helmet_obsidian.name=Obsidian Helmet
+item.ourcraft:chestplate_obsidian.name=Obsidian Chestplate
+item.ourcraft:leggings_obsidian.name=Obsidian Leggings
+item.ourcraft:boots_obsidian.name=Obsidian Boots
 
 item.ourcraft:pickaxe_bone.name=Bone Pickaxe
 item.ourcraft:shovel_bone.name=Bone Shovel
@@ -19,9 +22,5 @@ item.ourcraft:helmet_bone.name=Skull Helmet
 item.ourcraft:chestplate_bone.name=Ribsplate
 item.ourcraft:leggings_bone.name=Themour Leggings
 item.ourcraft:boots_bone.name=Bone Boots
-=======
-item.ourcraft:helmet_obsidian.name=Obsidian Helmet
-item.ourcraft:chestplate_obsidian.name=Obsidian Chestplate
-item.ourcraft:leggings_obsidian.name=Obsidian Leggings
-item.ourcraft:boots_obsidian.name=Obsidian Boots
->>>>>>> armor-names
+
+
