@@ -65,7 +65,6 @@ public class ModItems {
         BONE_LEGGINGS_ITEM = new BaseArmor("leggings_bone", ModMaterials.BONE_ARMOR, 1, EntityEquipmentSlot.LEGS);
         BONE_BOOTS_ITEM = new BaseArmor("boots_bone", ModMaterials.BONE_ARMOR, 0, EntityEquipmentSlot.FEET);
 
-
         OBSIDIAN_INGOT_ITEM =  new BaseItem("ingot_obsidian");
         OBSIDIAN_PICKAXE_ITEM = new BasePickaxeItem("pickaxe_obsidian", ModMaterials.OBSIDIAN);
         OBSIDIAN_SHOVEL_ITEM = new BaseShovelItem("shovel_obsidian",ModMaterials.OBSIDIAN);
