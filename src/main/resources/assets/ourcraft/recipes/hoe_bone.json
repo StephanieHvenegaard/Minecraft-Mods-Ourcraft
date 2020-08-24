@@ -7,13 +7,13 @@
   ],
   "key": {
     "V": {
-      "item": "ourcraft:ingot_obsidian"
+      "item": "minecraft:bone"
     },
     "S": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "ourcraft:hoe_obsidian"
+    "item": "ourcraft:hoe_bone"
   }
 }

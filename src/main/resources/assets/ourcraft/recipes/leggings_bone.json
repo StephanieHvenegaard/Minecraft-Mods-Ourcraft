@@ -7,10 +7,10 @@
   ],
   "key": {
     "I": {
-      "item": "ourcraft:ingot_obsidian"
+      "item": "minecraft:bone"
     }
   },
   "result": {
-    "item": "ourcraft:leggings_obsidian"
+    "item": "ourcraft:leggings_bone"
   }
 }

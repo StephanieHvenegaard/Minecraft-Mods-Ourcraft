@@ -6,10 +6,10 @@
   ],
   "key": {
     "I": {
-      "item": "ourcraft:ingot_obsidian"
+      "item": "minecraft:bone"
     }
   },
   "result": {
-    "item": "ourcraft:helmet_obsidian"
+    "item": "ourcraft:helmet_bone"
   }
 }
