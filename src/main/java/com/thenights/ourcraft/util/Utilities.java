@@ -98,7 +98,7 @@ public class Utilities
         int s = 0;
         for (EnumFacing f : EnumFacing.VALUES) {
             int s2 = w.getStrongPower(pos, f);
-            s = (s2 > s) ? s2 : s;
+            s = Math.max(s2, s);
         }
         return s;
     }
@@ -110,8 +110,8 @@ public class Utilities
 
             if (s.length == 2) {
                 try {
-                    int reach = Integer.valueOf(s[1]).intValue();
-                    return (reach > 2) ? 2 : reach;
+                    int reach = Integer.parseInt(s[1]);
+                    return Math.min(reach, 2);
                 } catch (NumberFormatException e) {
                     return 1;
                 }
@@ -120,75 +120,6 @@ public class Utilities
 
         return 1;
     }
-
-
     public static Vec3i extend(Vec3i v, int i) { return new Vec3i(v.getX() * i, v.getY() * i, v.getZ() * i); }
-//
-//
-//
-//    public static void drawWrappedString(String s, int x, int y, int maxWidth, FontRenderer f) { drawWrappedString(s, x, y, maxWidth, new Color(130, 130, 130), false, f); }
-//
-//
-//
-//    public static boolean carriesItem(Item item, EntityPlayer p) {
-//        if (p == null || item == null) {
-//            return false;
-//        }
-//        if (!p.getHeldItemMainhand().func_190926_b() && p.getHeldItemMainhand().func_77973_b().equals(item)) {
-//            return true;
-//        }
-//        if (!p.func_184592_cb().func_190926_b() && p.func_184592_cb().func_77973_b().equals(item)) {
-//            return true;
-//        }
-//        return false;
-//    }
-//
-//    public static ItemStack decreaseStack(ItemStack stack, int amount) {
-//        if (stack.func_190916_E() > amount) {
-//            stack.func_190918_g(amount);
-//        } else {
-//            return ItemStack.field_190927_a;
-//        }  return stack;
-//    }
-//
-//    public static EnumFacing getNextFacing(EnumFacing f) {
-//        if (f == EnumFacing.EAST) {
-//            return EnumFacing.DOWN;
-//        }
-//        return EnumFacing.values()[f.ordinal() + 1];
-//    }
-//
-//    public static String getModName(ItemStack s) {
-//        if (s == null) {
-//            return "nope";
-//        }
-//        String modID = s.func_77973_b().getRegistryName().func_110624_b();
-//        return (modID == null) ? "Minecraft" : modID;
-//    }
-//
-//    public static void setConfigValue(File f, String find, String replace) {
-//        try {
-//            BufferedReader file = new BufferedReader(new FileReader(f));
-//
-//            String input = "";
-//            String line;
-//            while ((line = file.readLine()) != null) {
-//                if (line.contains(find))
-//                    line = find + replace;
-//                input = input + line + '\n';
-//            }
-//
-//            file.close();
-//
-//            FileOutputStream fileOut = new FileOutputStream(f);
-//            fileOut.write(input.getBytes());
-//            fileOut.close();
-//        }
-//        catch (Exception e) {
-//            LogHelper.logError("Problem writing config file.", new Object[0]);
-//        }
-//    }
-//
-//
-//    public static boolean mouseInRect(int rectX, int rectY, int w, int h, int mouseX, int mouseY) { return (mouseX > rectX && mouseX < rectX + w && mouseY > rectY && mouseY < rectY + h); }
+
 }
