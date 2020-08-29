@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "V",
+    "V",
+    "S"
+  ],
+  "key": {
+    "V": {
+      "item": "minecraft:bone"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "ourcraft:sword_bone"
+  }
+}
