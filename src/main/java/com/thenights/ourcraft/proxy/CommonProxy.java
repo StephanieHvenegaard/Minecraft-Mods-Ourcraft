@@ -6,7 +6,10 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
+
 public class CommonProxy {
+
+
     public void PreInit(FMLPreInitializationEvent event) {
         ModItems.PreInit();
         //ModBlocks.PreInit();
@@ -22,6 +25,7 @@ public class CommonProxy {
         DispenserTweaks.register();
     }
 
-    public void PostInit(FMLPostInitializationEvent event) {}
+    public void PostInit(FMLPostInitializationEvent event) {
+    }
 }
 

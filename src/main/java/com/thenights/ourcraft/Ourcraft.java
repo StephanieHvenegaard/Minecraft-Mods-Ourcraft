@@ -1,8 +1,10 @@
 package com.thenights.ourcraft;
 
+import com.thenights.ourcraft.events.TreeEventHandler;
 import com.thenights.ourcraft.proxy.CommonProxy;
 import com.thenights.ourcraft.tab.CoreTab;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -37,12 +39,14 @@ public class Ourcraft
     {
         logger = event.getModLog();
         proxy.PreInit(event);
+
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
         proxy.Init(event);
+        MinecraftForge.EVENT_BUS.register(new TreeEventHandler());
     }
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
