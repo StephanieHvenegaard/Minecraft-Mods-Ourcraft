@@ -2,6 +2,8 @@
 
 ## Version 1.0.0 for minecraft 1.12.2
  - rebalanced obsidian tools and armor.
+ - added obsidian dust.
+ - changed recipies for obsidian
  - added sheerable and dyeable propperties to the dispenser.
  - added bone set.
  - added armor bar overlay.
