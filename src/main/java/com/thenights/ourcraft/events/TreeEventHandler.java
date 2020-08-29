@@ -1,6 +1,7 @@
 package com.thenights.ourcraft.events;
 
 import com.google.common.collect.ImmutableList;
+import com.thenights.ourcraft.init.ModItems;
 import com.thenights.ourcraft.util.PlayerInteract;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
@@ -71,7 +72,9 @@ public class TreeEventHandler {
             BlockPos blockPos = ((PlayerInteract) m_PlayerData.get(breakSpeed.getEntityPlayer().getPersistentID())).m_BlockPos;
 
             if (blockPos.equals(breakSpeed.getPos())) {
-                breakSpeed.setNewSpeed(breakSpeed.getOriginalSpeed() / ((PlayerInteract) m_PlayerData.get(breakSpeed.getEntityPlayer().getPersistentID())).m_LogCount / 2.0F);
+                // set new breaking speed.
+                //breakSpeed.setNewSpeed(breakSpeed.getOriginalSpeed() / ((PlayerInteract) m_PlayerData.get(breakSpeed.getEntityPlayer().getPersistentID())).m_LogCount / 2.0F); // original
+                breakSpeed.setNewSpeed(breakSpeed.getOriginalSpeed() / 2.0F);
             } else {
                 breakSpeed.setNewSpeed(breakSpeed.getOriginalSpeed());
             }
@@ -115,6 +118,10 @@ public class TreeEventHandler {
             return true;
         }
 
+        if(entityPlayer.getHeldItemMainhand().getItem().getUnlocalizedName().equals(ModItems.OBSIDIAN_AXE_ITEM.getUnlocalizedName()))
+        {
+            return true;
+        }
         try {
             ItemAxe tmp = (ItemAxe) entityPlayer.getHeldItemMainhand().getItem();
             test = true;
