@@ -121,22 +121,6 @@ public class TreeHandler {
         }
 
         if (world.getBlockState(blockPos).getBlock() != originBlock) {
-
-//            if (ConfigurationHandler.plantSapling && world.getBlockState(blockPos).getBlock().isLeaves(world.getBlockState(blockPos), (IBlockAccess)world, blockPos) && this.tree.GetM_Leaves().isEmpty()) {
-//                this.tree.InsertLeaf(blockPos);
-//            }
-//
-//            if (ConfigurationHandler.decayLeaves && ConfigurationHandler.leafWhiteList.contains(world.getBlockState(blockPos).getBlock().func_149739_a())) {
-//                this.tree.InsertLeaf(blockPos);
-//
-//                return false;
-//            }
-//
-//            if (ConfigurationHandler.decayLeaves && world.getBlockState(blockPos).getBlock().isLeaves(world.getBlockState(blockPos), (IBlockAccess)world, blockPos)) {
-//                this.tree.InsertLeaf(blockPos);
-//
-//                return false;
-//            }
             return false;
         }
 
@@ -165,30 +149,8 @@ public class TreeHandler {
 
                 soundReduced++;
             }
-
-//            if (ConfigurationHandler.plantSapling && !tmpTree.GetM_Leaves().isEmpty()) {
-//
-//                BlockPos tmpPosition = getLastElement(tmpTree.GetM_Leaves());
-//                PlantSapling(world, tmpPosition, tmpTree.getM_Position());
-//            }
-
             soundReduced = 0;
 
-//            if (ConfigurationHandler.decayLeaves)
-//            {
-//                for (BlockPos blockPos : tmpTree.GetM_Leaves()) {
-//
-//                    if (soundReduced <= 1) {
-//                        world.destroyBlock(blockPos, true);
-//                    } else {
-//                        world.getBlockState(blockPos).getBlock().dropBlockAsItem(world, blockPos, world.getBlockState(blockPos), 1);
-//                    }
-//
-//                    world.setBlockToAir(blockPos);
-//
-//                    soundReduced++;
-//                }
-//            }
         }
     }
 

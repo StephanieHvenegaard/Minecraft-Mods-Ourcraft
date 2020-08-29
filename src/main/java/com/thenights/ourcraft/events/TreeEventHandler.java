@@ -31,14 +31,14 @@ public class TreeEventHandler {
 
     @SubscribeEvent
     public void InteractWithTree(PlayerInteractEvent interactEvent) {
-        if (interactEvent.getSide().isClient() && m_PlayerPrintNames.containsKey(interactEvent.getEntityPlayer().getPersistentID()) && ((Boolean) m_PlayerPrintNames.get(interactEvent.getEntityPlayer().getPersistentID())).booleanValue()) {
+        if (interactEvent.getSide().isClient() && m_PlayerPrintNames.containsKey(interactEvent.getEntityPlayer().getPersistentID()) && (Boolean) m_PlayerPrintNames.get(interactEvent.getEntityPlayer().getPersistentID())) {
             interactEvent.getEntityPlayer().sendMessage((ITextComponent) new TextComponentTranslation(I18n.format("proxy.printBlock", new Object[0]) + " " + interactEvent.getWorld().getBlockState(interactEvent.getPos()).getBlock().getUnlocalizedName(), new Object[0]));
             interactEvent.getEntityPlayer().sendMessage((ITextComponent) new TextComponentTranslation(I18n.format("proxy.printMainHand", new Object[0]) + " " + interactEvent.getEntityPlayer().getHeldItemMainhand().getUnlocalizedName(), new Object[0]));
         }
 
-        boolean shifting = true;
 
-        if (CheckWoodenBlock(interactEvent.getWorld(), interactEvent.getPos()) && CheckItemInHand(interactEvent.getEntityPlayer()) && shifting) {
+
+        if (CheckWoodenBlock(interactEvent.getWorld(), interactEvent.getPos()) && CheckItemInHand(interactEvent.getEntityPlayer())) {
 
             int axeDurability = interactEvent.getEntityPlayer().getHeldItemMainhand().getMaxDamage() - interactEvent.getEntityPlayer().getHeldItemMainhand().getItemDamage();
 
@@ -109,25 +109,27 @@ public class TreeEventHandler {
     }
 
     protected boolean CheckItemInHand(EntityPlayer entityPlayer) {
-        boolean test;
+
         if (entityPlayer.getHeldItemMainhand().isEmpty()) {
             return false;
         }
 
-        if (axeTypes.contains(entityPlayer.getHeldItemMainhand().getItem().getUnlocalizedName())) {
-            return true;
-        }
+//        if (axeTypes.contains(entityPlayer.getHeldItemMainhand().getItem().getUnlocalizedName())) {
+//            return true;
+//        }
 
         if(entityPlayer.getHeldItemMainhand().getItem().getUnlocalizedName().equals(ModItems.OBSIDIAN_AXE_ITEM.getUnlocalizedName()))
         {
             return true;
         }
-        try {
-            ItemAxe tmp = (ItemAxe) entityPlayer.getHeldItemMainhand().getItem();
-            test = true;
-        } catch (Exception e) {
-            test = false;
-        }
-        return test;
+        // boolean test;
+//        try {
+//            ItemAxe tmp = (ItemAxe) entityPlayer.getHeldItemMainhand().getItem();
+//            test = true;
+//        } catch (Exception e) {
+//            test = false;
+//        }
+//        return test;
+        return false;
     }
 }
