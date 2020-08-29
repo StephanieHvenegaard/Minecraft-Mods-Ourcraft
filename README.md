@@ -1,5 +1,5 @@
 # Ourcraft.
-Ourcraft is a colection of custom features. some shamelessly inspired by other mods and some is our own designs. 
+Ourcraft is a colection of custom features. some features are shamelessly inspired by other mods and some is our own designs. 
 Ourcraft adds new potions, enchantmens, loads of new tools and weapons, and other features.
 
 ## Credits. 
