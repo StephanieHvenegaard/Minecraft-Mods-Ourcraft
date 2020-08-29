@@ -66,7 +66,7 @@ public class ArmorBar
         for (int i = 0; i < 10; i++) {
 
             armorIcons[i] = new ArmorIcon();
-            setArmorIconColor(armorIcons[i], new String[] { "#FFFFFF", "#FF5500", "#FFC747", "#27FFE3", "#00FF00", "#7F00FF" }, scale, counter);
+            setArmorIconColor(armorIcons[i], new String[] { "#FFFFFF","#27FFE3","#7F00FF" }, scale, counter);
             if (counter >= 2) {
 
 
