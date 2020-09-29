@@ -15,3 +15,7 @@ they where abselutly invaluable for learning how to mod for minecraft.
 - Vulcanite [Curse Forge](https://www.curseforge.com/minecraft/mc-mods/vulcanite)
 - Forbidden and Arcanus [Curse Forge](https://www.curseforge.com/minecraft/mc-mods/forbidden-arcanus/screenshots)
 - VanillaAutomation [Curse Forge](https://www.curseforge.com/minecraft/mc-mods/vanillaautomation)
+
+## Change log. 
+### 1.12.2 - 1.2.0 
+- removed the overloaded armor bar feature.
