@@ -24,7 +24,6 @@ public class CommonProxy {
 
         DispenserTweaks.register();
     }
-
     public void PostInit(FMLPostInitializationEvent event) {
     }
 }

@@ -3,6 +3,7 @@ Ourcraft is a colection of custom features. some features are shamelessly inspir
 Ourcraft adds new potions, enchantmens, loads of new tools and weapons, and other features.
 
 ## Credits. 
+Primary creators: 
 Coder     : Stephanie Night
 Graphichs : Müsli
 

@@ -20,7 +20,7 @@ public class Ourcraft
 
     public static final String MODID = "ourcraft";
     public static final String NAME = "Ourcraft Mod";
-    public static final String VERSION = "1.12.2-1.0.0";
+    public static final String VERSION = "1.12.2-1.2.0";
     public static final String RESOURCE_PREFIX = MODID+":";
     public static final String CLIENT_PROXY = "com.thenights.ourcraft.proxy.ClientProxy";
     public static final String SERVER_PROXY = "com.thenights.ourcraft.proxy.ServerProxy";
