@@ -1,0 +1,8 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0" : "immersivesteampunk:item/dense_obsidian_dust"
+    }
+}
+
+
