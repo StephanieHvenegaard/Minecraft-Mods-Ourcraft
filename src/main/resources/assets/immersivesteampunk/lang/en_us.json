@@ -1,3 +1,20 @@
 {
-  "item.immersivesteampunk.dense_obsidian_dust": "Dense Obsidian Dust"
+
+  "item.immersivesteampunk.music_disc_peace_and_tranquility": "Music Disc",
+  "item.immersivesteampunk.music_disc_peace_and_tranquility.desc": "Pascal Michael Stiefel - Peace and Tranquility",
+
+  "item.immersivesteampunk.obsidian_dust": "§5Obsidian Dust",
+  "item.immersivesteampunk.obsidian_ingot": "§5Obsidian Ingot",
+
+  "item.immersivesteampunk.obsidian_sword": "§5Obsidian Sword",
+  "item.immersivesteampunk.obsidian_axe": "§5Obsidian Axe",
+  "item.immersivesteampunk.obsidian_pickaxe": "§5Obsidian Pickaxe",
+  "item.immersivesteampunk.obsidian_shovel": "§5Obsidian Shovel",
+  "item.immersivesteampunk.obsidian_hoe": "§5Obsidian Hoe",
+
+  "item.immersivesteampunk.obsidian_helmet": "§5Obsidian Helmet",
+  "item.immersivesteampunk.obsidian_chestplate": "§5Obsidian Chestplate",
+  "item.immersivesteampunk.obsidian_leggings": "§5Obsidian Leggings",
+  "item.immersivesteampunk.obsidian_boots": "§5Obsidian Boots",
+  "item.immersivesteampunk.obsidian_horse_armor": "§5Obsidian Horse Armor"
 }
