@@ -1,8 +1,7 @@
 package com.thenigths.ourcraft.immersivesteampunk.utils;
 
 import com.thenigths.ourcraft.immersivesteampunk.Main;
-import com.thenigths.ourcraft.immersivesteampunk.Tiers.ArmorTiers;
-import com.thenigths.ourcraft.immersivesteampunk.Tiers.ToolTiers;
+import com.thenigths.ourcraft.immersivesteampunk.enums.Tiers.Tier;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -27,49 +26,76 @@ public class RegistryHandler {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
     }
+    public static final RegistryObject<Item> OBSIDIAN_INGOT = createItem("obsidian_ingot");
+    public static final RegistryObject<Item> OBSIDIAN_DUST = createItem("obsidian_dust");
 
+    public static final RegistryObject<AxeItem> OBSIDIAN_AXE = createAxe(Tier.OBSIDIAN);
+    public static final RegistryObject<PickaxeItem> OBSIDIAN_PICK = createPickAxe(Tier.OBSIDIAN);
+    public static final RegistryObject<ShovelItem> OBSIDIAN_SHOWEL = createShowel(Tier.OBSIDIAN);
+    public static final RegistryObject<HoeItem> OBSIDIAN_Hoe = createHoe(Tier.OBSIDIAN);
 
-    public static final RegistryObject<Item> RUBY = ITEMS.register("dense_obsidian_dust", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<ArmorItem> OBSIDIAN_HELMET = createArmorHelmet(Tier.OBSIDIAN);
+    public static final RegistryObject<ArmorItem> OBSIDIAN_CHESTPLATE= createArmorChest(Tier.OBSIDIAN);
+    public static final RegistryObject<ArmorItem> OBSIDIAN_LEGGINS = createArmorLeggings(Tier.OBSIDIAN);
+    public static final RegistryObject<ArmorItem> OBSIDIAN_BOOTS = createArmorBoots(Tier.OBSIDIAN);
+
+    private static RegistryObject<Item> createItem(String name){
+        return ITEMS.register(name, () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    }
+    private static RegistryObject<AxeItem> createAxe(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_axe", () ->
+                new AxeItem((IItemTier) itemTier, 8.0F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)));
+    }
+    private static  RegistryObject<PickaxeItem> createPickAxe(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_pickaxe", () ->
+                new PickaxeItem((IItemTier)itemTier, 4, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)));
+    }
+    private static  RegistryObject<ShovelItem> createShowel(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_shovel", () ->
+                new ShovelItem((IItemTier) itemTier, 6.0F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)));
+    }
+    private static  RegistryObject<HoeItem> createHoe(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_hoe", () ->
+                new HoeItem((IItemTier) itemTier, 0, 0.0F, (new Item.Properties()).group(ItemGroup.TOOLS)));
+    }
+    private static  RegistryObject<SwordItem> createSword(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_sword", () ->
+                new SwordItem( itemTier, 7, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)));
+    }
+    private static  RegistryObject<HorseArmorItem> createArmorHorse(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_horse_armor", () ->
+                new HorseArmorItem(
+                        itemTier.getDamageReductionAmount(EquipmentSlotType.CHEST)+5,
+                        new ResourceLocation(Main.MOD_ID+":textures/entity/horse/armor/"+ itemTier.getTierName()+"_horse_armor.png"),
+                        (new Item.Properties()).group(ItemGroup.COMBAT)));
+    }
+    private static  RegistryObject<ArmorItem> createArmorHelmet(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_helmet", () ->
+                new ArmorItem( itemTier, EquipmentSlotType.HEAD, (new Item.Properties()).group(ItemGroup.COMBAT)));
+    }
+    private static  RegistryObject<ArmorItem> createArmorChest(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_chestplate", () ->
+                new ArmorItem((IArmorMaterial) itemTier, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)));
+    }
+    private static  RegistryObject<ArmorItem> createArmorLeggings(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_leggings", () ->
+                new ArmorItem((IArmorMaterial) itemTier, EquipmentSlotType.LEGS, (new Item.Properties()).group(ItemGroup.COMBAT)));
+    }
+    private static  RegistryObject<ArmorItem> createArmorBoots(Tier itemTier) {
+        return ITEMS.register(itemTier.getTierName()+"_boots", () ->
+                new ArmorItem((IArmorMaterial) itemTier, EquipmentSlotType.FEET, (new Item.Properties()).group(ItemGroup.COMBAT)));
+    }
+    private static  RegistryObject<Item> createMusicDisc(Tier itemTier) {
+        return null;
+    }
 
 //    public static final RegistryObject<MusicDiscItem> MUSIC_DISC_P_A_T = ITEMS.register("music_disc_peace_and_tranquility", ()-> {
 //        return new MusicDiscItem();
 //    });
-
-
-    public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () ->
-            new SwordItem((IItemTier) ToolTiers.RUBY, 7, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)));
-    public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe", () ->
-            new AxeItem((IItemTier) ToolTiers.RUBY, 8.0F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)));
-    public static final RegistryObject<PickaxeItem> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", () ->
-            new PickaxeItem((IItemTier) ToolTiers.RUBY, 4, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)));
-    public static final RegistryObject<ShovelItem> RUBY_SHOVEL = ITEMS.register("ruby_shovel", () ->
-            new ShovelItem((IItemTier) ToolTiers.RUBY, 6.0F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)));
-    public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", () ->
-            new HoeItem((IItemTier) ToolTiers.RUBY, 0, 0.0F, (new Item.Properties()).group(ItemGroup.TOOLS)));
-
-
-    public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () ->
-            new ArmorItem((IArmorMaterial) ArmorTiers.RUBY, EquipmentSlotType.HEAD, (new Item.Properties()).group(ItemGroup.COMBAT)));
-    public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () ->
-            new ArmorItem((IArmorMaterial) ArmorTiers.RUBY, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)));
-    public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () ->
-            new ArmorItem((IArmorMaterial) ArmorTiers.RUBY, EquipmentSlotType.LEGS, (new Item.Properties()).group(ItemGroup.COMBAT)));
-    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () ->
-            new ArmorItem((IArmorMaterial) ArmorTiers.RUBY, EquipmentSlotType.FEET, (new Item.Properties()).group(ItemGroup.COMBAT)));
-    public static final RegistryObject<HorseArmorItem> RUBY_HORSE_ARMOR = ITEMS.register("ruby_horse_armor", () ->
-            new HorseArmorItem(15, new ResourceLocation("ruby:textures/entity/horse/armor/horse_armor_ruby.png"), (new Item.Properties()).group(ItemGroup.COMBAT)));
-//
-//
 //    public static final RegistryObject<Block> BLOCK_OF_RUBY = BLOCKS.register("ruby_block", com.pickleface.ruby.blocks.RubyBlock::new);
 //    public static final RegistryObject<OreBlock> RUBY_ORE = BLOCKS.register("ruby_ore", com.pickleface.ruby.blocks.RubyOre::new);
-//
-//
 //    public static final RegistryObject<Item> BLOCK_OF_RUBY_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase((Block)BLOCK_OF_RUBY.get()));
 //    public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase((Block)RUBY_ORE.get()));
-//
-//
 //    public static final RegistryObject<SoundEvent> MUSIC_DISC_PEACE_AND_TRANQUILITY = SOUNDS.register("music_disc.peace_and_tranquility", () -> new SoundEvent(new ResourceLocation("ruby", "music_disc.peace_and_tranquility")));
-//
-//
 //    public static final RegistryObject<ParticleType<BasicParticleType>> RUBY_SHINE = PARTICLES.register("ruby_shine", () -> new BasicParticleType(false));
 }
