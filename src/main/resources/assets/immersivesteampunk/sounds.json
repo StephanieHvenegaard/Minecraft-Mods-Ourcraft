@@ -1,0 +1,11 @@
+{
+  "music_disc.peace_and_tranquility": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ruby:records/peace_and_tranquility",
+        "stream": true
+      }
+    ]
+  }
+}

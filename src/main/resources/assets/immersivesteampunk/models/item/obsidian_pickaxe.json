@@ -1,8 +1,6 @@
 {
-    "parent": "item/handheld.json",
-    "textures": {
-        "layer0" : "immersivesteampunk:item/lol"
-    }
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "immersivesteampunk:item/obsidian_pickaxe"
+  }
 }
-
-
