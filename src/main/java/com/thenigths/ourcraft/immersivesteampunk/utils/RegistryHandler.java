@@ -26,7 +26,7 @@ public class RegistryHandler {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
     }
-    public static final RegistryObject<Item> OBSIDIAN_INGOT = createItem("obsidian_ingot");
+    public static final RegistryObject<Item> OBSIDIAN_INGOT = createItem("obsidian_ingot",true);
     public static final RegistryObject<Item> OBSIDIAN_DUST = createItem("obsidian_dust");
 
     public static final RegistryObject<AxeItem> OBSIDIAN_AXE = createAxe(Tier.OBSIDIAN);
@@ -42,48 +42,93 @@ public class RegistryHandler {
     private static RegistryObject<Item> createItem(String name){
         return ITEMS.register(name, () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
     }
+    private static RegistryObject<Item> createItem(String name,boolean fireproof){
+        if(fireproof)
+            return ITEMS.register(name, () -> new Item(new Item.Properties().group(ItemGroup.MISC).isImmuneToFire()));
+        else
+            return ITEMS.register(name, () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    }
     private static RegistryObject<AxeItem> createAxe(Tier itemTier) {
-        return ITEMS.register(itemTier.getTierName()+"_axe", () ->
-                new AxeItem((IItemTier) itemTier, 8.0F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)));
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
+        return ITEMS.register(itemTier.getTierName()+"_axe", ()->new AxeItem(itemTier, 8.0F, -3.0F, finalProps));
     }
     private static  RegistryObject<PickaxeItem> createPickAxe(Tier itemTier) {
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
         return ITEMS.register(itemTier.getTierName()+"_pickaxe", () ->
-                new PickaxeItem((IItemTier)itemTier, 4, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)));
+                new PickaxeItem((IItemTier)itemTier, 4, -2.8F, finalProps));
     }
     private static  RegistryObject<ShovelItem> createShowel(Tier itemTier) {
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
         return ITEMS.register(itemTier.getTierName()+"_shovel", () ->
-                new ShovelItem((IItemTier) itemTier, 6.0F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)));
+                new ShovelItem((IItemTier) itemTier, 6.0F, -3.0F, finalProps));
     }
     private static  RegistryObject<HoeItem> createHoe(Tier itemTier) {
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
         return ITEMS.register(itemTier.getTierName()+"_hoe", () ->
-                new HoeItem((IItemTier) itemTier, 0, 0.0F, (new Item.Properties()).group(ItemGroup.TOOLS)));
+                new HoeItem((IItemTier) itemTier, 0, 0.0F, finalProps));
     }
     private static  RegistryObject<SwordItem> createSword(Tier itemTier) {
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
         return ITEMS.register(itemTier.getTierName()+"_sword", () ->
-                new SwordItem( itemTier, 7, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)));
+                new SwordItem( itemTier, 7, -2.4F, finalProps));
     }
     private static  RegistryObject<HorseArmorItem> createArmorHorse(Tier itemTier) {
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
         return ITEMS.register(itemTier.getTierName()+"_horse_armor", () ->
                 new HorseArmorItem(
                         itemTier.getDamageReductionAmount(EquipmentSlotType.CHEST)+5,
                         new ResourceLocation(Main.MOD_ID+":textures/entity/horse/armor/"+ itemTier.getTierName()+"_horse_armor.png"),
-                        (new Item.Properties()).group(ItemGroup.COMBAT)));
+                        finalProps));
     }
     private static  RegistryObject<ArmorItem> createArmorHelmet(Tier itemTier) {
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
         return ITEMS.register(itemTier.getTierName()+"_helmet", () ->
-                new ArmorItem( itemTier, EquipmentSlotType.HEAD, (new Item.Properties()).group(ItemGroup.COMBAT)));
+                new ArmorItem( itemTier, EquipmentSlotType.HEAD, finalProps));
     }
     private static  RegistryObject<ArmorItem> createArmorChest(Tier itemTier) {
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
         return ITEMS.register(itemTier.getTierName()+"_chestplate", () ->
-                new ArmorItem((IArmorMaterial) itemTier, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)));
+                new ArmorItem((IArmorMaterial) itemTier, EquipmentSlotType.CHEST, finalProps));
     }
     private static  RegistryObject<ArmorItem> createArmorLeggings(Tier itemTier) {
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
         return ITEMS.register(itemTier.getTierName()+"_leggings", () ->
-                new ArmorItem((IArmorMaterial) itemTier, EquipmentSlotType.LEGS, (new Item.Properties()).group(ItemGroup.COMBAT)));
+                new ArmorItem((IArmorMaterial) itemTier, EquipmentSlotType.LEGS, finalProps));
     }
     private static  RegistryObject<ArmorItem> createArmorBoots(Tier itemTier) {
+        Item.Properties props = new Item.Properties().group(ItemGroup.TOOLS);
+        if(itemTier.isImmuneToFire())
+            props = props.isImmuneToFire();
+        Item.Properties finalProps = props;
         return ITEMS.register(itemTier.getTierName()+"_boots", () ->
-                new ArmorItem((IArmorMaterial) itemTier, EquipmentSlotType.FEET, (new Item.Properties()).group(ItemGroup.COMBAT)));
+                new ArmorItem((IArmorMaterial) itemTier, EquipmentSlotType.FEET, finalProps));
     }
     private static  RegistryObject<Item> createMusicDisc(Tier itemTier) {
         return null;

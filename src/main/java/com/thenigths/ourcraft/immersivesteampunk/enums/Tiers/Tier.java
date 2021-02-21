@@ -15,26 +15,29 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.function.Supplier;
 
 public enum Tier implements IArmorMaterial, IItemTier {
-    OBSIDIAN("obsidian",25,ArmorTier.OBSIDIAN,ToolTier.OBSIDIAN,() -> Ingredient.fromItems((IItemProvider)RegistryHandler.OBSIDIAN_INGOT.get()));
+    OBSIDIAN("obsidian",25,true,ArmorTier.OBSIDIAN,ToolTier.OBSIDIAN,() -> Ingredient.fromItems((IItemProvider)RegistryHandler.OBSIDIAN_INGOT.get()));
 
     private final String name;
     private final Supplier<Ingredient> repairMaterial;
     private final int enchantability;
+    private final boolean isImmuneToFire;
     private final ToolTier toolTier;
     private final ArmorTier armorTier;
 
-    Tier(String name, int enchantability, ArmorTier armorTier, ToolTier toolTier, Supplier<Ingredient> repairMaterial) {
+    Tier(String name, int enchantability, boolean isImmuneToFire, ArmorTier armorTier, ToolTier toolTier, Supplier<Ingredient> repairMaterial) {
         this.name = name;
         this.enchantability = enchantability;
         this.repairMaterial =repairMaterial;
         this.armorTier = armorTier;
         this.toolTier = toolTier;
+        this.isImmuneToFire = isImmuneToFire;
     }
     public int getDurability(EquipmentSlotType slotIn) { return this.armorTier.getDurability(slotIn);}
     public int getDamageReductionAmount(EquipmentSlotType slotIn) { return this.armorTier.getDamageReductionAmount(slotIn); }
     public int getEnchantability() { return this.enchantability; }
     public SoundEvent getSoundEvent() { return  this.armorTier.getSoundEvent();}
     public Ingredient getRepairMaterial() { return this.repairMaterial.get();}
+
     @OnlyIn(Dist.CLIENT)
     public String getName() { return Main.MOD_ID+":"+this.name; }
     public String getTierName(){return this.name;}
@@ -44,5 +47,6 @@ public enum Tier implements IArmorMaterial, IItemTier {
     public float getEfficiency() { return this.toolTier.getEfficiency(); }
     public float getAttackDamage() { return this.toolTier.getAttackDamage(); }
     public int getHarvestLevel() { return this.toolTier.getHarvestLevel(); }
+    public boolean isImmuneToFire(){return this.isImmuneToFire;}
 
 }
