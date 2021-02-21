@@ -15,7 +15,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.function.Supplier;
 
 public enum Tier implements IArmorMaterial, IItemTier {
-    OBSIDIAN("obsidian",25,ArmorTier.RUBY,ToolTier.RUBY,() -> Ingredient.fromItems((IItemProvider)RegistryHandler.OBSIDIAN_INGOT.get()));
+    OBSIDIAN("obsidian",25,ArmorTier.OBSIDIAN,ToolTier.OBSIDIAN,() -> Ingredient.fromItems((IItemProvider)RegistryHandler.OBSIDIAN_INGOT.get()));
 
     private final String name;
     private final Supplier<Ingredient> repairMaterial;

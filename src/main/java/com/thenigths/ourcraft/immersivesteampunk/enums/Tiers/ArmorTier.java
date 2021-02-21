@@ -4,7 +4,7 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 
 public enum ArmorTier{
-    RUBY( 33, new int[] { 3, 6, 8, 3 }, 25, 1.5F,SoundEvents.ITEM_ARMOR_EQUIP_GENERIC);
+    OBSIDIAN( 65,6, 10, 9, 5  , 3, 0.17F,SoundEvents.ITEM_ARMOR_EQUIP_GENERIC);
 
     private final float knockbackResistance;
     private final float toughness;
@@ -13,9 +13,9 @@ public enum ArmorTier{
     private final int maxDamageFactor;
     private static final int[] MAX_DAMAGE_ARRAY = new int[] { 11, 16, 15, 13 };
 
-    ArmorTier(int maxDamageFactor, int[] damageReductionAmountArray, float toughness, float knockbackResistance, SoundEvent soundEvent) {
+    ArmorTier(int maxDamageFactor, int damageReductionHead, int damageReductionChest, int damageReductionLegs, int damageReductionBoots, float toughness, float knockbackResistance, SoundEvent soundEvent) {
         this.maxDamageFactor = maxDamageFactor;
-        this.damageReductionAmountArray = damageReductionAmountArray;
+        this.damageReductionAmountArray = new int[] { damageReductionBoots,damageReductionLegs,damageReductionChest, damageReductionHead};
         this.toughness = toughness;
         this.knockbackResistance = knockbackResistance;
         this.soundEvent = soundEvent;

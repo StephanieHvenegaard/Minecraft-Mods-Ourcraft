@@ -1,7 +1,7 @@
 package com.thenigths.ourcraft.immersivesteampunk.enums.Tiers;
 
 public enum ToolTier {
-    RUBY(3, 9747, 10.0F, 0.0F);
+    OBSIDIAN(3, 1561 * 2, 5.0f, 5.0f);
 
     private final float attackDamage;
     private final float efficiency;
