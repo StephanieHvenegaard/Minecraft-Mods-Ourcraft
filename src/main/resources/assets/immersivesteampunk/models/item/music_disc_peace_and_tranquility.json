@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ruby:items/music_disc_peace_and_tranquility"
+  }
+}
