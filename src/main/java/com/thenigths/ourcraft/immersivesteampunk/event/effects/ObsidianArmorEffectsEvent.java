@@ -29,6 +29,6 @@ public class ObsidianArmorEffectsEvent {
             effect++;
         }
         if (effect >= 0)
-            event.player.addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 20, (effect / 2), false, false, true));
+            event.player.addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 20, (effect / 3), false, false, true));
     }
 }
